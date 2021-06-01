@@ -33,7 +33,6 @@ pipeline {
                 npm install
                 npm run cypress:backend
                '''
-               archiveArtifacts allowEmptyArchive: true, artifacts: 'backend-tests/cypress/videos/**', followSymlinks: false
                publishHTML([
                    allowMissing: false, 
                     alwaysLinkToLastBuild: false, 
@@ -46,10 +45,22 @@ pipeline {
         }
         stage('Performance tests') {
             steps {
-               sh 'pwd'
-               sh 'ls -lart' 
+               sh '''
+                cd performance-tests/
+                rm test1.csv -Rf && rm html-reports/ -Rf
+                jmeter -n -t login-logout.jmx -l test1.csv -e -o html-reports/
+               '''
+               publishHTML([
+                   allowMissing: false, 
+                    alwaysLinkToLastBuild: false, 
+                    keepAll: false, 
+                    reportDir: 'performance-tests/html-reports', 
+                    reportFiles: 'index.html', 
+                    reportName: 'Performance testresult', 
+                    reportTitles: ''])
             }
         }
+        
     }
 
 }
