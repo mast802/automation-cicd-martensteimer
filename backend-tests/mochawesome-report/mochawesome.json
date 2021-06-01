@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-09T19:05:29.756Z",
+    "end": "2021-05-09T19:05:32.795Z",
+    "duration": 3039,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d884972f-9bc6-41f2-8825-bdf9a5daaf6a",
+      "title": "",
+      "fullFile": "cypress/integration/backend-test.spec.js",
+      "file": "cypress/integration/backend-test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+          "title": "Backend test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testcase 03 - View rooms",
+              "fullTitle": "Backend test suite Testcase 03 - View rooms",
+              "timedOut": null,
+              "duration": 589,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "roomHelpers.getAllRoomsRequest(cy);\ncommonHelpers.logoutRequest(cy);",
+              "err": {},
+              "uuid": "13900b22-e9f1-4a34-b16f-6301b252e677",
+              "parentUUID": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testcase 04 - Create new room",
+              "fullTitle": "Backend test suite Testcase 04 - Create new room",
+              "timedOut": null,
+              "duration": 642,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "roomHelpers.createRoomRequest(cy);\ncommonHelpers.logoutRequest(cy);",
+              "err": {},
+              "uuid": "c20a828b-654d-4a18-b518-b2cccc0472ee",
+              "parentUUID": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testcase 05 - Edit room",
+              "fullTitle": "Backend test suite Testcase 05 - Edit room",
+              "timedOut": null,
+              "duration": 612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "roomHelpers.editRoomRequest(cy);\ncommonHelpers.logoutRequest(cy);",
+              "err": {},
+              "uuid": "5511e9c1-43af-41cf-a09c-496082f9bd08",
+              "parentUUID": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 08 - Create client",
+              "fullTitle": "Backend test suite Test case 08 - Create client",
+              "timedOut": null,
+              "duration": 574,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.createClientRequest(cy);\ncommonHelpers.logoutRequest(cy);",
+              "err": {},
+              "uuid": "bfe6552e-8b85-438f-b365-3ec0568cd314",
+              "parentUUID": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 10 - Delete client",
+              "fullTitle": "Backend test suite Test case 10 - Delete client",
+              "timedOut": null,
+              "duration": 585,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.deleteClientRequest(cy);\ncommonHelpers.logoutRequest(cy);",
+              "err": {},
+              "uuid": "83ed7670-a794-4ebb-8f91-ec820f0e1506",
+              "parentUUID": "faf9af4a-d60c-4a09-8345-9f4470d0dca2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13900b22-e9f1-4a34-b16f-6301b252e677",
+            "c20a828b-654d-4a18-b518-b2cccc0472ee",
+            "5511e9c1-43af-41cf-a09c-496082f9bd08",
+            "bfe6552e-8b85-438f-b365-3ec0568cd314",
+            "83ed7670-a794-4ebb-8f91-ec820f0e1506"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3002,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

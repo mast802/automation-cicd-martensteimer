@@ -11,7 +11,7 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --reporter mochawesome --spec 'cypress/integration/test-suite-with pageObjects.spec.js'",
+    "cypress:frontend": "cypress run --reporter mochawesome --spec 'cypress/integration/test-suite-with pageObjects.spec.js'",
     "test:vrt": "percy exec cypress run --spec 'cypress/integration/vrt.spec.js'"
   },
   "keywords": [],
