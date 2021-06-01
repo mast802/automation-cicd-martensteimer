@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-23T20:46:56.695Z",
+    "end": "2021-04-23T20:47:10.477Z",
+    "duration": 13782,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce484cea-9c3c-414b-9e81-d64924ba16ac",
+      "title": "",
+      "fullFile": "cypress/integration/vrt.spec.js",
+      "file": "cypress/integration/vrt.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "382ff98f-8b89-4b58-bb14-f52341f23778",
+          "title": "Virtual regression test using page objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Edit single room",
+              "fullTitle": "Virtual regression test using page objects Edit single room",
+              "timedOut": null,
+              "duration": 12008,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.percySnapshot('login');\nindexFunctions.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ncy.contains('Reservations');\ncy.percySnapshot('dashbord');\ndashbordFunctions.veiwRooms(cy, 'Rooms');\ncy.percySnapshot('view_rooms');\nroomFunctions.createRoom(cy, 'New Room');\ncy.percySnapshot('new_room');\naddRoomFunctions.addNewRoom(cy, 'Single', '224', '2', '1250', ['Balcony', 'Sea View']);\nroomFunctions.assertLastElementRoomTitle(cy, 'Room 224');\nroomFunctions.assertLastElementRoomPrice(cy, '1250');\nroomFunctions.editLastRoom(cy);\ncy.percySnapshot('edit_room');\neditRoomFunctions.editPrice(cy, '2500');\nroomFunctions.assertLastElementRoomTitle(cy, 'Room 224');\nroomFunctions.assertLastElementRoomPrice(cy, '2500');\nroomFunctions.backToDashboard(cy, 'Tester Hotel Overview');\ndashbordFunctions.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "b0d10c7f-8401-4550-b9f5-4b620bc8f14f",
+              "parentUUID": "382ff98f-8b89-4b58-bb14-f52341f23778",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b0d10c7f-8401-4550-b9f5-4b620bc8f14f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12008,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
